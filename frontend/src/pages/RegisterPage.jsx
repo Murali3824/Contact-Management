@@ -54,7 +54,7 @@ const RegisterPage = () => {
               <input
                 type="text"
                 required
-                className="input-field pl-10"
+                className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 placeholder="johndoe"
                 value={formData.username}
                 onChange={(e) => setFormData({ ...formData, username: e.target.value })}
@@ -71,7 +71,7 @@ const RegisterPage = () => {
               <input
                 type="email"
                 required
-                className="input-field pl-10"
+                className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -88,7 +88,7 @@ const RegisterPage = () => {
               <input
                 type="password"
                 required
-                className="input-field pl-10"
+                className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 placeholder="••••••••"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}

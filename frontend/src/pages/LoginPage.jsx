@@ -52,7 +52,7 @@ const LoginPage = () => {
               <input
                 type="email"
                 required
-                className="input-field pl-10"
+                className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 placeholder="john@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -69,7 +69,7 @@ const LoginPage = () => {
               <input
                 type="password"
                 required
-                className="input-field pl-10"
+                className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
