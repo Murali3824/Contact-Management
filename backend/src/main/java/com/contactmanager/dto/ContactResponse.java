@@ -12,6 +12,7 @@ public class ContactResponse {
     private String email;
     private String phone;
     private String address;
-    private boolean isFavorite;
+    @com.fasterxml.jackson.annotation.JsonProperty("isFavorite")
+    private boolean favorite;
     private List<String> tagNames;
 }

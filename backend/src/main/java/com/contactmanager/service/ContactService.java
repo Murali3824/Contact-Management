@@ -114,7 +114,7 @@ public class ContactService {
     public List<ContactResponse> getContactsByTag(Long tagId, String username) {
         User user = userRepository.findByEmail(username)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
-        return contactRepository.findByUserAndTagsId(user, tagId).stream()
+        return contactRepository.findContactsByTagId(user, tagId).stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }

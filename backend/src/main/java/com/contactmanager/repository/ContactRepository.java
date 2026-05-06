@@ -17,5 +17,6 @@ public interface ContactRepository extends JpaRepository<Contact, Long> {
            "LOWER(c.lastName) LIKE LOWER(CONCAT('%', :name, '%')))")
     List<Contact> searchByName(@Param("user") User user, @Param("name") String name);
 
-    List<Contact> findByUserAndTagsId(User user, Long tagId);
+    @Query("SELECT c FROM Contact c JOIN c.tags t WHERE c.user = :user AND t.id = :tagId")
+    List<Contact> findContactsByTagId(@Param("user") User user, @Param("tagId") Long tagId);
 }
