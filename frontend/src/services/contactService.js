@@ -1,0 +1,40 @@
+import api from './api';
+
+export const contactService = {
+    getAll: async () => {
+        const response = await api.get('/contacts');
+        return response.data;
+    },
+    getById: async (id) => {
+        const response = await api.get(`/contacts/${id}`);
+        return response.data;
+    },
+    create: async (contactData) => {
+        const response = await api.post('/contacts', contactData);
+        return response.data;
+    },
+    update: async (id, contactData) => {
+        const response = await api.put(`/contacts/${id}`, contactData);
+        return response.data;
+    },
+    delete: async (id) => {
+        const response = await api.delete(`/contacts/${id}`);
+        return response.data;
+    },
+    search: async (name) => {
+        const response = await api.get(`/contacts/search?name=${name}`);
+        return response.data;
+    },
+    getFavorites: async () => {
+        const response = await api.get('/contacts/favorites');
+        return response.data;
+    },
+    toggleFavorite: async (id) => {
+        const response = await api.patch(`/contacts/${id}/favorite`);
+        return response.data;
+    },
+    getByTag: async (tagId) => {
+        const response = await api.get(`/contacts/tags/${tagId}`);
+        return response.data;
+    }
+};
