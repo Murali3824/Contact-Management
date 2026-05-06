@@ -47,8 +47,10 @@ const RegisterPage = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Username</label>
-            <div className="relative">
-              <User className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <div className="relative group">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <User className="text-slate-400 group-focus-within:text-primary-500 transition-colors" size={18} />
+              </div>
               <input
                 type="text"
                 required
@@ -62,8 +64,10 @@ const RegisterPage = () => {
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
-            <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <div className="relative group">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Mail className="text-slate-400 group-focus-within:text-primary-500 transition-colors" size={18} />
+              </div>
               <input
                 type="email"
                 required
@@ -77,8 +81,10 @@ const RegisterPage = () => {
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Password</label>
-            <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <div className="relative group">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Lock className="text-slate-400 group-focus-within:text-primary-500 transition-colors" size={18} />
+              </div>
               <input
                 type="password"
                 required
